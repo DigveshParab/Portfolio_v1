@@ -1,0 +1,327 @@
+.skills-container{
+    width: 83%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-title{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -1.2em;
+}
+.skills-title>h3{
+    font-family: monospace;
+    font-size: 1.8rem;
+    color: rgb(74, 167, 167);
+    word-spacing: -6px;
+    margin-bottom: 0em;
+}
+.skills-line{
+    width: 20%;
+    height: .1px;
+    background-color: rgba(62, 147, 147, 0.365);
+    border: .1px solid rgba(62, 147, 147, 0.299);
+    border-radius: 10px;
+    margin-top: -1.5em;
+    margin-left: 1em;
+    animation: showfromleftskills 2s forwards;
+}
+.skill-holder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-heading{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill-heading>h4{
+    font-family: monospace;
+    font-size: 3rem;
+    color: rgba(246, 244, 244, 0.708);
+
+}
+.skill-main-list{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(53, 45, 62, 0.879);
+    position: absolute;
+    margin-top: 17em;
+    z-index: 3;
+    backdrop-filter: blur(1.5px); 
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Add padding for better spacing */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    max-height: 300px; /* Limit maximum height to prevent excessive scrolling */
+    color: #fff;
+    animation: growMenu 0.5s forwards; /* Animation for growth */
+    
+}
+
+.skill-main-list-closed{
+    width: 200px;
+    height: 10px;
+    background-color: transparent;
+    position: absolute;
+    margin-top: 5em;
+    z-index: 3;
+    backdrop-filter: blur(1.5px); 
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 10px; /* Add padding for better spacing */
+    max-height: 300px; /* Limit maximum height to prevent excessive scrolling */
+    color: #fff;
+    animation: shrinkMenu 0.5s forwards; /* Animation for growth */
+
+    
+}
+.skill-main-list::-webkit-scrollbar {
+    width: 4px; /* Set the width of the scrollbar */
+}
+.skill-main-list::-webkit-scrollbar-thumb {
+    background-color: rgba(99, 99, 99, 0.676); /* Set the color of the thumb (the draggable part) */
+}
+.skill-main-list >P{
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.skill-main-list>p > span{
+    margin-left: 1em;
+    margin-right: .5em;
+    color: rgb(74, 167, 167);
+}
+.active-list-item{
+    background-color: rgba(154, 151, 151, 0.189);
+}
+.skill-list-btn-holder{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-list-btn{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(75, 154, 154, 0.772);
+    border-radius: 50%;
+    transition: border-radius 1s,scale 2s,width .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: .1em;
+}
+.skill-list-btn:hover{
+    width: 100%;
+    height: 20px;
+    scale: 1.1;
+    cursor: pointer;
+    border-radius: 5px;
+    /* border-radius: 50% 50% 10% 10% / 82% 82% 18% 18%   ; */
+}
+.skill-main-list-closed>p{
+    display: none;
+}
+.skill-main-list p:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten background color on hover */
+}
+.skill-left-btn {
+    width: 50px;
+    height: 60%;
+    border-left: 2px solid rgb(45, 37, 53);
+    transition: border-color 1s,background-color 1s; /* Add a smooth transition for height change */
+}
+.skill-right-btn {
+    width: 50px;
+    height: 60%;
+    border-right: 2px solid rgb(45, 37, 53);
+    transition: border-color 1s,background-color 1s; /* Add a smooth transition for height change */
+}
+.skill-left-btn:hover {
+    border-left: 2px solid rgb(74, 167, 167);
+    cursor: pointer;
+}
+
+.skill-right-btn:hover {
+    cursor: pointer;
+    border-right: 2px solid rgb(74, 167, 167);
+}
+
+.skill-left-btn::before,
+.skill-right-btn::before {
+    left: 0;
+}
+
+.skill-left-btn::after,
+.skill-right-btn::after {
+    right: 0;
+}
+
+.skill-left-btn:hover::before,
+.skill-left-btn:hover::after {
+    background-color: rgba(74, 167, 167, 0.3); /* Adjust opacity and color as needed */
+}
+
+.skill-right-btn:hover::before,
+.skill-right-btn:hover::after {
+    background-color: rgba(74, 167, 167, 0.3); /* Adjust opacity and color as needed */
+}
+
+.skill-left-btn:hover {
+    background: linear-gradient(to right, rgba(74, 167, 167, 0.5), rgba(74, 167, 167, 0));
+}
+
+.skill-right-btn:hover {
+    background: linear-gradient(to left, rgba(74, 167, 167, 0.5), rgba(74, 167, 167, 0));
+}
+.skill-list-holder{
+    width: 430px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-list-item-image{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: .05;
+    transition: opacity ease-in-out;
+    animation: skill-list-image-go-blur 2s forwards;
+}
+.skill-list-item-content{
+    width: 400px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    /* background-color: rgba(90, 88, 88, 0.187); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3em;
+    animation: skill-list-content-fade-in 2s forwards;
+}
+.skill-list-item-content>h4{
+    margin: 0em;
+    font-size: 1.5rem;
+    font-family: monospace;
+    color: rgb(74, 167, 167);
+    font-weight: bold;
+}
+.skill-list-item-content>p{
+    margin: 1em;
+    font-size: 1rem;
+    font-family: monospace;
+    color: rgb(74, 167, 167);
+    font-weight: bold;
+}
+.skill-list-next-btn-holder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-list-next-btn,.skill-list-prev-btn{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(74, 167, 167);
+    border-radius: 50%;
+    transition: border-radius 1s,scale 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: .1em;
+}
+.skill-list-prev-btn{
+    rotate: 180deg;
+    margin-right: .6em;
+}
+.skill-list-next-btn:hover{
+    scale: 1.5;
+    cursor: pointer;
+    border-radius: 14% 67% 67% 14% / 50% 50% 50% 50% ;
+}
+.skill-list-prev-btn:hover{
+    scale: 1.5;
+    cursor: pointer;
+    border-radius: 14% 67% 67% 14% / 50% 50% 50% 50% ;
+}
+.skill-list-item-count{
+    width: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: 1rem;
+    font-family: monospace;
+    color: rgb(74, 167, 167);
+    font-weight: bold;
+}
+@keyframes showfromleftskills{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 20%;
+    }
+}
+@keyframes skill-list-image-go-blur{
+    from{
+        opacity: .5;
+    }
+    to{
+        opacity: .05;
+    }
+}
+@keyframes skill-list-content-fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growMenu {
+    from {
+        margin-top: 5em;
+        height: 10px; 
+    }
+    to {
+        margin-top: 17em;
+        height: 200px; 
+    }
+}
+@keyframes shrinkMenu{
+    from {
+        background-color: rgba(53, 45, 62, 0.879);
+        margin-top: 17em;
+        height: 200px; 
+    }
+    to {
+        background-color: transparent;
+        margin-top: 5em;
+        height: 10px; 
+    }
+}

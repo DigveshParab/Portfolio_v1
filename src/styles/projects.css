@@ -1,0 +1,240 @@
+.project-container{
+    width: 83%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-title{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.project-title>h3{
+    font-family: monospace;
+    font-size: 1.8rem;
+    margin-left: 1em;
+    color: rgba(246, 244, 244, 0.708);
+    word-spacing: -6px;
+}
+.project-line{
+    width: 30%;
+    height: .1px;
+    background-color: rgba(62, 147, 147, 0.365);
+    border: .1px solid rgba(62, 147, 147, 0.299);
+    border-radius: 10px;
+    margin-top: -1.5em;
+    margin-left: 1em;
+    animation: showfromleft 2s forwards;
+}
+.project-item-hold{
+    width: 90%;
+    height: 400px;
+    margin: 1em 0em 1em 0em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.project-item-hold-zoom{
+    width: 90%;
+    height: 400px;
+    margin: 1em 0em 1em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-image{
+    width: 550px;
+    height: 350px;
+    background-color: rgba(74, 61, 92, 0.393);
+    z-index: 0;
+    margin-left: 4em;
+    animation: decreaseWidth 1s forwards;
+}
+.project-image>img{
+    object-fit: fill;
+    width: 550px;
+    height: 350px;
+    filter: grayscale(50%); /* Example: Convert the image to grayscale */
+    opacity: .5;
+    transition: opacity 1s;
+}
+.project-image>img:hover{
+    cursor: pointer;
+    opacity: 1;
+    filter: grayscale(0%);
+}
+.project-image-active{
+    width: 70%;
+    height: 350px;
+    /* background-color: rgba(74, 61, 92, 0.393); */
+    z-index: 1;
+    animation: increaseWidth 1s forwards;
+}
+.project-image-active>img{
+    object-fit: contain;
+    width: 100%;
+    height: 350px;
+}
+.project-image-active>img:hover{
+    cursor: pointer;
+}
+.project-content{
+    width: 600px;
+    height: 190px;
+    background-color: rgb(31, 27, 37);
+    z-index: 1;
+    position: relative;
+    /* when below is uncommented comment this */
+    left: -15%;
+    top: 8%; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgb(34, 30, 40);
+    /* for reverse styling uncomment*/
+    /* left: 15%; */
+    /* order: -1; */
+    animation: fadeBoxIn 2s forwards;
+}
+.project-content-left{
+    width: 600px;
+    height: 190px;
+    background-color: rgb(31, 27, 37);
+    z-index: 1;
+    position: relative;
+    /* when below is uncommented comment this */
+    /* left: -15%; */
+    top: 8%; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgb(34, 30, 40);
+    /* for reverse styling uncomment*/
+    left: 15%;
+    order: -1;
+    animation: fadeBoxIn 2s forwards;
+}
+.project-content-inactive{
+    width: 450px;
+    height: 250px;
+    background-color: rgb(31, 27, 37);
+    z-index: 0;
+    position: relative;
+    left: -15%;
+    top: 8%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgb(34, 30, 40);
+    animation: fadeBoxout 2s forwards;
+    display: none;
+}
+/* styles for inner content */
+.project-content,.project-content-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+.project-content-left{
+    align-items: flex-start;
+    text-align: left;
+}
+.project-content>h5,.project-content-left>h5{
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: rgb(33, 182, 182);
+    margin: -1em 1em 0em 0em;position: relative;
+    top: -5%;
+    left: 2%;
+}
+.project-content>h4,.project-content-left>h4{
+    font-family: monospace;
+    font-size: 1.3rem;
+    margin-left: 1.5em;
+    color: rgba(246, 244, 244, 0.708);
+    margin: .7em 1em 0em 0em;
+}
+.project-content-left>h4{
+    margin: .7em 0em 0em 1em;
+}
+.project-content>p,.project-content-left>p{
+    width: 450px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(246, 244, 244, 0.824);
+    font-size: .9rem;
+    width: 380px;
+    margin-right: 1.5em;
+    margin-left: 1em;
+}
+.project-content-left>p{
+    margin-left: 1.5em;
+}
+.project-tools{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: monospace;
+    font-size: .9rem;
+    
+}
+.project-tools>a{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease;
+    text-decoration: none;
+    color: rgb(33, 182, 182);
+}
+.project-tools>a:hover{
+    /* box-shadow: 0px 0px 90px 0px rgba(98, 225, 225, 0.605); */
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.374),
+                 0 0 20px rgba(255, 255, 255, 0.374),
+                 0 0 40px rgba(255, 255, 255, 0.374),
+                 0 0 80px rgba(255, 255, 255, 0.374),
+                 0 0 160px rgba(255, 255, 255, 0.374);
+}
+@keyframes showfromleft{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 35%;
+    }
+}
+@keyframes increaseWidth{
+    from{
+        width: 550px;
+    }
+    to{
+        width: 70%;
+        
+    }
+}
+@keyframes decreaseWidth{
+    from{
+        width: 70%;
+    }
+    to{
+        width: 550px;
+    }
+}
+@keyframes fadeBoxIn{
+    from{
+        opacity: 0;
+        z-index: 0;
+    }
+    to{
+        opacity: 1;
+        z-index: 1;
+    }
+}
+@keyframes fadeBoxOut{
+    from{
+        opacity: 1;
+        z-index: 1;
+    }
+    to{
+        opacity: 0;
+        z-index: 0;
+    }
+}

@@ -1,0 +1,180 @@
+.app-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-holder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-holder{
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    margin-top: .2em;
+    transition: ease-in 200ms ;
+
+}
+.resume-holder>p{
+    padding: .5em;
+    color: white;
+    border-radius:5px ;
+    border: 2px solid rgb(49, 116, 116);
+    font-family: monospace;
+    font-size: 1rem;
+    background-color: rgb(45, 37, 53);
+}
+.resume-holder:hover{
+    margin-right: 7px;
+    cursor: pointer;
+}
+.resume-shadow{
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    margin-top: .2em;
+}
+.resume-shadow>P{
+    padding: .5em;
+    color: rgb(49, 116, 116);
+    border-radius:5px ;
+    border: 2px solid rgb(49, 116, 116);
+    font-family: monospace;
+    font-size: 1rem;
+    background-color:rgb(49, 116, 116) ;
+}
+.email-holder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);  
+    position: fixed;
+    bottom: 28%;  
+    left: 45%;
+    animation: email 2s forwards;
+}
+.social-holder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);  
+    position: fixed;
+    bottom: 24%;
+    right: 44%;
+    animation: social 2s forwards;
+}
+.intro-holder{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-holder{
+    width: 100%;
+    height: 500px;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work-holder{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    /* background-color: red; */
+}
+
+.project-holder{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-holder{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.skills-holder{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+}
+
+.contact-holder{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credits-holder{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credits-holder>p{
+    font-size: 1rem;
+    font-family: monospace;
+    color: rgb(74, 167, 167);
+
+}
+
+
+
+
+/* animations */
+@keyframes social {
+    from{
+        bottom: -10%;
+        right: 44%;
+    }
+    to{
+        bottom: 16%;
+        right: 44%;
+    }
+}
+@keyframes email {
+    from{
+        bottom: -10%;
+        right: 44%;
+    }
+    to{
+        bottom: 24%;
+        right: 44%;
+    }
+}
+
+
+@media (max-width:500px){
+    body{
+        background-color: white;
+        display: none;
+    }
+}

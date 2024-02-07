@@ -1,0 +1,14 @@
+body{
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(45, 37, 53);
+}
+body::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(17, 17, 17, 0.676); /* Set the color of the thumb (the draggable part) */
+}
+html{
+  scroll-behavior: smooth;
+}

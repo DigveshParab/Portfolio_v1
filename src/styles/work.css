@@ -1,0 +1,113 @@
+.work-container{
+    width: 83%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.work-title{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.work-title>h3{
+    font-family: monospace;
+    font-size: 1.7rem;
+    margin-left: 1em;
+    color: rgba(246, 244, 244, 0.708);
+}
+.work-line{
+    width: 45%;
+    height: .1px;
+    background-color: rgba(62, 147, 147, 0.365);
+    border: .1px solid rgba(62, 147, 147, 0.299);
+    border-radius: 10px;
+    margin-top: -1.5em;
+    margin-left: 1em;
+    animation: showfromleft 2s forwards;
+}
+.work-record-holder{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+.work-tabs{
+    width: 100px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+.work-tabs>span{
+    font-size: .9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(246, 244, 244, 0.708);   
+    padding: 1.2em 1em 1.2em 1em; 
+    border-left: 2px solid  rgba(151, 151, 151, 0.45);
+    background-color: transparent;
+    transition: ease-in 200ms ;
+}
+.work-tabs>span:hover{
+    cursor: pointer;
+    background-color: rgba(75, 74, 74, 0.183);
+    color: rgb(62, 147, 147);
+}
+.work-tabs>.active-class-work{
+    border-left: 2px solid rgb(62, 147, 147);
+}
+.work-tabs>.inactive-class-work{
+    border-left: 2px solid  rgba(151, 151, 151, 0.45);
+}
+.work-details{
+    width: 450px;
+    height: 400px;
+    margin-left: 3.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.work-details>h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: rgba(246, 244, 244, 0.708);
+}
+.work-details>h4>span{
+    color:rgb(62, 147, 147) ;
+}
+.work-details>span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    color: rgba(246, 244, 244, 0.708);
+    margin-top: -.5em;
+}
+.work-points-holder{
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.work-points-holder>p{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    color:rgba(246, 244, 244, 0.708) ;
+    font-size: 1.1rem;
+    margin: .2em 0em .2em 0em;
+}
+
+
+@keyframes showfromleft{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 45%;
+    }
+}

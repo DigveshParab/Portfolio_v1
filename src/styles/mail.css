@@ -1,0 +1,23 @@
+.email-container{
+    width: 500px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-container>a{
+    text-decoration: none;
+    color: rgb(192, 189, 189);
+    font-size: 1rem;
+    font-family: monospace;
+}
+.email-container>a:hover{
+    color: rgba(236, 233, 233, 0.895);
+    cursor: pointer;
+    box-shadow: 0px 0px 200px 0px rgba(255, 255, 255, 0.228);
+}
+.mail-line{
+    width: 80px;
+    border: 1px solid rgb(192, 189, 189);
+    margin-left: .5em;
+}

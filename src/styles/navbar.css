@@ -1,0 +1,72 @@
+.classA{
+    width: 560px;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    animation: change 1s forwards;
+}
+.classA>a{
+    text-decoration: none;
+    color: rgb(192, 189, 189);
+    font-size: 1rem;
+    font-family: monospace;
+    padding: .5em 1.2em .5em 1.2em;
+    
+}
+.classA>a:hover{
+    background-color: rgba(83, 69, 69, 0.29);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.active-tab{
+    background-color:rgb(62, 147, 147);
+    border-radius: 50px;
+    scale: 1.1;
+}
+.classB{
+    width: 560px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: rgba(207, 204, 204, 0.13);
+    margin-top: 1em;
+    animation: appear 1s forwards;
+    backdrop-filter: blur(4.5px); 
+    z-index: 2;
+}
+.classB>a{
+    text-decoration: none;
+    color: rgb(232, 229, 229);
+    font-size: 1rem;
+    font-family: monospace;
+    padding: .8em 1.2em .5em 1.2em;
+    
+}
+.classB>a:hover{
+    background-color: rgba(159, 145, 145, 0.29);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@keyframes appear{
+    from{
+        margin-top: -4em;
+    }
+    to{
+        margin-top:1em ;
+    }
+}
+@keyframes change{
+    from{
+        background-color: rgba(207, 204, 204, 0.048);
+    }
+    to{
+        background-color: transparent;
+    }
+}
